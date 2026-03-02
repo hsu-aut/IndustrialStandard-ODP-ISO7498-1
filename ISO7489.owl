@@ -59,9 +59,6 @@
         <Class IRI="#MQTT"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Name"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Network"/>
     </Declaration>
     <Declaration>
@@ -98,13 +95,13 @@
         <ObjectProperty IRI="#hasLayer"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasName"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#transmitsData"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#usesTechnology"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasName"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Application"/>
@@ -205,13 +202,6 @@
         <Class IRI="#Frame"/>
         <Class IRI="#Package"/>
         <Class IRI="#Segment"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Communication"/>
-        <Class IRI="#DataUnit"/>
-        <Class IRI="#Layer"/>
-        <Class IRI="#Name"/>
-        <Class IRI="#Technology"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#DHCP"/>
@@ -234,10 +224,6 @@
         <Class IRI="#Communication"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasName"/>
-        <Class IRI="#Communication"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#transmitsData"/>
         <Class IRI="#Communication"/>
     </ObjectPropertyDomain>
@@ -252,10 +238,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasLayer"/>
         <Class IRI="#Layer"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasName"/>
-        <Class IRI="#Name"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#transmitsData"/>
@@ -265,13 +247,14 @@
         <ObjectProperty IRI="#usesTechnology"/>
         <Class IRI="#Technology"/>
     </ObjectPropertyRange>
-    <DisjointObjectProperties>
-        <ObjectProperty IRI="#hasDataUnit"/>
-        <ObjectProperty IRI="#hasLayer"/>
-        <ObjectProperty IRI="#hasName"/>
-        <ObjectProperty IRI="#transmitsData"/>
-        <ObjectProperty IRI="#usesTechnology"/>
-    </DisjointObjectProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasName"/>
+        <Class IRI="#Communication"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Application</IRI>
@@ -355,11 +338,6 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#MQTT</IRI>
-        <Literal xml:lang="de">tbd.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Name</IRI>
         <Literal xml:lang="de">tbd.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
